@@ -13,12 +13,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/MySQLServlet")
-public class MySQLServlet extends HttpServlet {
-	public MySQLServlet() {
+public class MySQLServlet extends HttpServlet{
+	public MySQLServlet(){
 	        super();
 	}
 
-	 protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	 protected void doGet(HttpServletRequest request,HttpServletResponse response)throws ServletException,IOException{
 	     request.setCharacterEncoding("UTF-8");
 	     response.setContentType("text/html; charset=UTF-8");
 
@@ -33,7 +33,7 @@ public class MySQLServlet extends HttpServlet {
 	     Connection conn = null;
 	     String url = "jdbc:mysql://localhost/testdb";
 	     String user = "root";
-	     String password = "mysql";
+	     String password = "";
 
 	     try {
 	       Class.forName("com.mysql.jdbc.Driver");
