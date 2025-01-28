@@ -11,6 +11,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
 @WebServlet("/MySQLServlet")
 public class MySQLServlet extends HttpServlet {
 	public MySQLServlet() {
@@ -53,6 +54,7 @@ public class MySQLServlet extends HttpServlet {
 
 	       rs.close();
 	       stmt.close();
+
 	     }catch (ClassNotFoundException e){
 	       out.println("ClassNotFoundException:" + e.getMessage());
 	     }catch (SQLException e){
